@@ -68,12 +68,6 @@ function setup() {
         flock.push(new Koi(spawn, createVector(random(-2, 2), random(-2, 2)), color(232, 146, 117), 0));
         spawn.set(startL.x + random(AVG_SIZE * -6, AVG_SIZE * 6), startL.y + random(AVG_SIZE * -6, AVG_SIZE * 6));
     }
-    startL.set(random(width*0.2, width*0.8), random(height*0.3, height*0.7));
-    spawn.set(startL);
-    for(var i = 0; i < 15; i++){
-        flock.push(new Koi(spawn, createVector(random(-2, 2), random(-2, 2)), color(255), 1));
-        spawn.set(startL.x + random(AVG_SIZE * -6, AVG_SIZE * 6), startL.y + random(AVG_SIZE * -6, AVG_SIZE * 6));
-    }
 
     repeller = new Attrepller(createVector(event.clientX, event.clientY), 0);
     attractor = new Attrepller(createVector(event.clientX, event.clientY), 0);
